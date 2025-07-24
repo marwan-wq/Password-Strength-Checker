@@ -1,0 +1,177 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* Professional background image with dark overlay */
+  background: 
+    linear-gradient(120deg, rgba(34,37,38,0.85) 0%, rgba(65,67,69,0.85) 100%),
+    url('wallpaperflare.com_wallpaper.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.container {
+  background: rgba(34, 40, 49, 0.98);
+  padding: 2.5rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  max-width: 400px;
+  width: 100%;
+  transition: box-shadow 0.3s cubic-bezier(.4,2,.6,1);
+}
+
+.container:hover {
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.55);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #00eaff;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#password {
+  width: 100%;
+  padding: 14px 44px 14px 14px;
+  font-size: 17px;
+  border: 1.5px solid #23272f;
+  border-radius: 10px;
+  outline: none;
+  background: #23272f;
+  color: #f0f0f0;
+  box-shadow: 0 2px 8px #0002 inset;
+  transition: box-shadow 0.2s, background 0.2s, border 0.2s;
+}
+
+#password:focus {
+  box-shadow: 0 0 0 2px #00eaff55;
+  background: #23272f;
+  border-color: #00eaff;
+}
+
+.eye {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 22px;
+  color: #00eaffcc;
+  transition: color 0.2s;
+  user-select: none;
+}
+
+.eye:hover,
+.eye:focus {
+  color: #00b6c2;
+}
+
+button#checkBtn {
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(90deg, #00eaff 0%, #00ff9f 100%);
+  color: #181818;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: background 0.3s, color 0.2s, box-shadow 0.2s, transform 0.1s;
+  box-shadow: 0 2px 8px #00eaff22;
+}
+
+button#checkBtn:hover,
+button#checkBtn:focus {
+  background: linear-gradient(90deg, #00b6c2 0%, #00ffb0 100%);
+  color: #101010;
+  box-shadow: 0 4px 16px #00eaff44;
+  outline: none;
+  transform: translateY(-2px) scale(1.01);
+}
+
+#feedback {
+  font-size: 15px;
+  margin-bottom: 12px;
+  min-height: 20px;
+  color: #ffe082;
+  text-align: center;
+}
+
+.strength-meter {
+  height: 12px;
+  background: #353b48;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  box-shadow: 0 1px 4px #0002 inset;
+}
+
+.strength-bar {
+  height: 100%;
+  width: 0%;
+  transition: width 0.5s cubic-bezier(.4,2,.6,1), background 0.3s;
+  background: linear-gradient(90deg, #ff5c5c, #ffb347, #00ff9f);
+}
+
+#suggestion {
+  font-style: italic;
+  color: #b0eaff;
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: block;
+  text-align: center;
+}
+
+.breach {
+  margin-top: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 0.2px;
+  text-align: center;
+}
+
+.breach.safe {
+  color: #00ff9f;
+}
+
+.breach:not(.safe) {
+  color: #ff5c5c;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .container {
+    padding: 1.2rem 0.5rem;
+    border-radius: 10px;
+    max-width: 95vw;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  #password {
+    font-size: 15px;
+    padding: 12px 38px 12px 12px;
+  }
+  button#checkBtn {
+    font-size: 0.95rem;
+    padding: 11px;
+  }
+}
